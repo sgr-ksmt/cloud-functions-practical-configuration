@@ -1,0 +1,20 @@
+{
+  "name": "project",
+  "scripts": {
+    "build": "yarn --silent tsc && cp package.json dist/ && cp yarn.lock dist/",
+    "deploy": "yarn --silent firebase deploy"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^8.12.1",
+    "firebase-functions": "^3.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "firebase-tools": "^8.4.3",
+    "typescript": "^3.9.5"
+  }
+}

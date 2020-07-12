@@ -1,11 +1,5 @@
-import { exportFunctionsModule } from '../../utils/deploy'
-import * as P from '../../function_path'
+import * as User from './user'
+import * as Task from './task'
 
-const domains = [
-  P.user,
-  P.task,
-]
-
-domains.forEach(d =>
-  exportFunctionsModule([P.v1, P.firestore, d], exports)
-)
+export const user = { ...User }
+export const task = { ...Task }

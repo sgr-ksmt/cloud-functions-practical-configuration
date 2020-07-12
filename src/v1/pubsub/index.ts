@@ -1,9 +1,3 @@
-import { exportFunctionsModule } from '../../utils/deploy'
+import * as Task from './task'
 
-const domains = [
-  'task',
-]
-
-domains.forEach(d =>
-  exportFunctionsModule(['v1', 'pubsub', d], exports)
-)
+export const task = { ...Task }

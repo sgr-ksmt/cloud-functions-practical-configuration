@@ -1,12 +1,7 @@
-import { exportFunctionsModule } from '../utils/deploy'
-import * as P from '../function_path'
+import * as Firestore from './firestore'
+import * as Callable from './callable'
+import * as Pubsub from './pubsub'
 
-const domains = [
-  P.firestore,
-  P.callable,
-  P.pubsub,
-]
-
-domains.forEach(d =>
-  exportFunctionsModule([P.v1, d], exports)
-)
+export const firestore = { ...Firestore }
+export const callable = { ...Callable }
+export const pubsub = { ...Pubsub }

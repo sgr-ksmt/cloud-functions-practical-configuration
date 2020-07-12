@@ -1,10 +1,3 @@
-import { exportFunctionsModule } from '../utils/deploy'
-import * as P from '../function_path'
+import * as V1 from './v1'
 
-const domains = [
-  P.v1,
-]
-
-domains.forEach(d =>
-  exportFunctionsModule([P.admin, d], exports)
-)
+export const v1 = { ...V1 }

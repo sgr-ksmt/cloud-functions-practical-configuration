@@ -1,12 +1,5 @@
-import { exportFunctionsModule } from './utils/deploy'
-import * as admin from 'firebase-admin'
-import * as P from './function_path'
+import * as V1 from './v1'
+import * as Admin from './admin'
 
-admin.initializeApp()
-
-const domains = [
-  P.v1,
-  P.admin
-]
-
-domains.forEach(d => exportFunctionsModule([d], exports))
+export const v1 = { ...V1 }
+export const admin = { ...Admin }
